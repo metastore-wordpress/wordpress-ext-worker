@@ -1,0 +1,85 @@
+.wp-ext-worker {
+	.worker-grid {
+		display: grid;
+		grid-gap: 2rem;
+		grid-template-columns: min-content 1fr;
+		.entry-title {
+			font-size: 2rem;
+		}
+	}
+	.worker-content {
+		margin-bottom: 4rem;
+	}
+	.worker-cover {
+		a {
+			$bg_color: hsl(0, 0%, 96%);
+			$size: 20rem;
+
+			display: grid;
+			background: $bg_color no-repeat 50%;
+			background-size: cover;
+			border: .5rem solid $bg_color;
+			border-radius: .4rem;
+			height: ($size + 10);
+			width: $size;
+			i {
+				display: block;
+				color: hsl(0, 0%, 86%);
+				font-size: $size / 2;
+				align-self: center;
+				justify-self: center;
+			}
+		}
+	}
+	.worker-contacts {
+		font-size: 1.4rem;
+		h4 {
+			font-size: 1.6rem;
+			margin: 1rem 0 1rem;
+		}
+	}
+	.worker-position,
+	.worker-department {
+		font-size: 1.4rem;
+		color: hsl(0, 0%, 48%);
+	}
+}
+
+.archive.wp-ext-worker {
+	main {
+		.worker-content {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.single.wp-ext-worker {
+	main {
+		.worker-position {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.widget.wp-ext-worker {
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	a {
+		$bg_color: hsl(0, 0%, 96%);
+		$size: 15rem;
+
+		display: grid;
+		background: $bg_color no-repeat 50%;
+		background-size: cover;
+		border: 1rem solid $bg_color;
+		border-radius: .4rem;
+		height: $size;
+		i {
+			color: hsl(0, 0%, 86%);
+			font-size: $size / 2;
+			align-self: center;
+			justify-self: center;
+		}
+	}
+}

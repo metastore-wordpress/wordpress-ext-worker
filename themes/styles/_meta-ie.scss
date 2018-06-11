@@ -1,0 +1,15 @@
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+	.worker-grid {
+		display: flex;
+		> div {
+			&:first-child {
+				margin-right: 2rem;
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
