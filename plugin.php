@@ -19,7 +19,7 @@
 
 /**
  * Loading `WP_EXT_Worker`.
- * ------------------------------------------------------------------------------------------------------------------ */
+ */
 
 function run_wp_ext_worker() {
 	require_once( plugin_dir_path( __FILE__ ) . 'includes/WP_EXT_Worker.class.php' );

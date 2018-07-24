@@ -2,14 +2,12 @@
 
 /**
  * Class WP_EXT_Worker_Taxonomy
- * ------------------------------------------------------------------------------------------------------------------ */
-
+ */
 class WP_EXT_Worker_Taxonomy extends WP_EXT_Worker {
 
 	/**
 	 * Constructor.
-	 * -------------------------------------------------------------------------------------------------------------- */
-
+	 */
 	public function __construct() {
 		parent::__construct();
 
@@ -18,8 +16,7 @@ class WP_EXT_Worker_Taxonomy extends WP_EXT_Worker {
 
 	/**
 	 * Plugin: `initialize`.
-	 * -------------------------------------------------------------------------------------------------------------- */
-
+	 */
 	public function run() {
 		add_action( 'init', [ $this, 'taxonomy_meta' ], 0 );
 		add_action( 'init', [ $this, 'taxonomy_type' ], 0 );
@@ -27,8 +24,7 @@ class WP_EXT_Worker_Taxonomy extends WP_EXT_Worker {
 
 	/**
 	 * Taxonomy: `worker_meta`.
-	 * -------------------------------------------------------------------------------------------------------------- */
-
+	 */
 	public function taxonomy_meta() {
 		$labels  = [
 			'name'                       => _x( 'Worker Meta', 'Meta General Name', 'wp-ext-' . $this->domain_ID ),
@@ -74,8 +70,7 @@ class WP_EXT_Worker_Taxonomy extends WP_EXT_Worker {
 
 	/**
 	 * Taxonomy: `worker_type`.
-	 * -------------------------------------------------------------------------------------------------------------- */
-
+	 */
 	public function taxonomy_type() {
 		$labels  = [
 			'name'                       => _x( 'Worker Type', 'Type General Name', 'wp-ext-' . $this->domain_ID ),
@@ -124,8 +119,7 @@ class WP_EXT_Worker_Taxonomy extends WP_EXT_Worker {
  * Helper function to retrieve the static object without using globals.
  *
  * @return WP_EXT_Worker_Taxonomy
- * ------------------------------------------------------------------------------------------------------------------ */
-
+ */
 function WP_EXT_Worker_Taxonomy() {
 	static $object;
 
@@ -138,6 +132,5 @@ function WP_EXT_Worker_Taxonomy() {
 
 /**
  * Initialize the object on `plugins_loaded`.
- * ------------------------------------------------------------------------------------------------------------------ */
-
+ */
 add_action( 'plugins_loaded', [ WP_EXT_Worker_Taxonomy(), 'run' ] );
